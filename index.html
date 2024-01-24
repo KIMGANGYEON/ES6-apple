@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div>
+        <button id="button">button</button>
+    </div>
+
+
+    <script>
+        // 'use strict'
+        document.getElementById('button').addEventListener('click', function(){
+            console.log(this);
+
+            var abc = [1, 2, 3]
+            abc.forEach(function(a){
+                console.log(a)
+            })
+        })
+
+
+        var array = {
+            name : ['kim', 'lee', 'park'],
+            fun : function(){
+                array.name.forEach(function(){
+                    console.log(this);
+                })
+            }
+        }
+        array.fun()
+
+        // var abc = {
+        //     data : 'kim',
+        //     함수 : function(){
+        //         console.log('hi')
+        //     }
+        // }
+
+        // abc.함수();
+    </script>
+</body>
+</html>
