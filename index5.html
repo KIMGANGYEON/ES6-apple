@@ -9,13 +9,57 @@
     
 
     <script>
-        // Object.create(프로토타입object);
+        class 할배 {
+            constructor(name){
+                this.성 = 'Kim'
+                this.이름 = name;
+            }
+            sayHi(){
+                console.log('h2')
+            }
+        }
 
-        var 부모 = { name : 'kim', age : 50};
+        // var 할배1 = new 할배('웅이');
+        // extends 부모 클래스 상속
 
-        var 자식 = Object.create(부모)
-        // 자식.age = 20;
+        class 아바이 extends 할배 {
+            constructor(name){
+                super(name)
+                this.나이 = 50;
+            }
+            sayHi(){
+                console.log('h22222')
+                super.sayHi()
+                // 할배꺼 가져옴
+            }
+        }
 
+        var 아바이1 = new 아바이('진욱');
+
+        // class 부모 {
+        //     constructor() {
+        //         this.name = 'kim'
+        //         // this.sayHi = function(){
+        //         //     console.log('hello')
+        //         }
+        //         sayHi(){
+        //             console.log('hello')
+        //         }
+        //     }
+        // // }
+
+        // var 자식 = new 부모();
+
+        // // Object.create(프로토타입object);
+
+        // var 부모 = { name : 'kim', age : 50};
+
+        // var 자식 = Object.create(부모);
+        // // 자식.age = 20;
+
+        // var 손자 = Object.create(자식);
+
+        
     </script>
 </body>
 </html>

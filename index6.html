@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class 사람 {
+            constructor() {
+                this.name = 'park'
+                this.age = 20;
+            }
+            get nextAge(){
+                return this.age + 1;
+            }
+            set setAge(나니){
+                this.age = 나니;
+            }
+        }
+
+        var 사람1 = new 사람();
+
+        // var 사람 = {
+        //     name : 'park',
+        //     age : 30,
+        //     get nextAge(){
+        //         return this.age + 1
+        //     },
+        //     set setAge(나니){
+        //        this.age = parseInt(나니);
+        //         // parseInt 문자 숫자로 변황
+        //     }
+        // }
+        // //get 쓰면 소괄호 노필요(펑션 실행할때)
+        // // 사람.nextAge()
+        // // 사람.nextAge
+        // 사람.setAge = '30'
+        // // 사람.setAge('50');
+        // //set 쓰면 직관적으로 바뀜
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // class 멍멍 {
+        //     constructor(type2, color2){
+        //         this.type = type2
+        //         this.color = color2
+        //     }
+        // }
+
+        // var 멍멍1 = new 멍멍('도베르만', '갈색,검은색')
+
+        // class 냥 {
+        //     constructor(type2, color2){
+        //         this.type = type2
+        //         this.color = color2
+        //     }
+        //     abc(){
+        //         if(this instanceof 냥) {
+        //             this.age++
+        //         }
+        //     }
+
+        // }
+        // class 냥냥 extends 냥 {
+        //     constructor(type2, color2, age){
+        //         super(type2, color2, age)
+        //         this.age2 = age;
+        //     }
+        // }
+        // var 냥1 = new 냥냥('도베르만', '갈색,검은색', 5)
+
+
+
+
+
+        class Dog {
+            constructor(타입, 칼라){
+                this.type = 타입;
+                this.color = 칼라;
+            }
+
+            eat(){
+                if( this instanceof Cat) {
+                this.age++;
+                }
+             }
+            }
+
+        class Cat extends Dog {
+            constructor(타입, 칼라, 나이){
+                super(타입, 칼라);
+                this.age = 나이;
+            }
+        }
+        var 고양이1 = new Cat('동네고양이', 'white', 1);
+        고양이1.eat()
+     
+
+
+class Unit {
+  constructor(){
+    this.체력 = 100;
+    this.공격력 = 5;
+  }
+  get battlePoint(){
+    return this.체력 + this.공격력;
+  }
+  set heal(a){
+    this.체력 = this.체력 + a; 
+  }
+};
+
+var 쎈애 = new Unit();
+
+console.log(쎈애.battlePoint);
+쎈애.heal = 50;
+    </script>
+</body>
+</html>
