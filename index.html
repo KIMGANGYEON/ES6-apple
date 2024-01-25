@@ -15,25 +15,78 @@
 
     <script>
         // 'use strict'
-        document.getElementById('button').addEventListener('click', function(){
-            console.log(this);
+        //전역변수
+        window.name = 'kim'
 
-            var abc = [1, 2, 3]
-            abc.forEach(function(a){
-                console.log(a)
-            })
+        var 버튼들 = document.querySelectorAll('button');
+var 모달창들 = document.querySelectorAll('div');
+
+버튼들[0].addEventListener('click', function(){
+  모달창들[0].style.display = 'block';
+});
+      
+
+        for (let i = 0; i < 5; i++) {
+            setTimeout(function(){console.log(i)}, i * 1000);
+        }
+
+        document.getElementById('button').addEventListener('click', function(){
+            // this.innerHTML
+            var zvd = this;
+            setTimeout(() => {
+            console.log(this.innerHTML)},1000)
         })
 
+        // [1, 2, 3, 4].forEach( a => console.log(a) );
 
-        var array = {
-            name : ['kim', 'lee', 'park'],
-            fun : function(){
-                array.name.forEach(function(){
-                    console.log(this);
-                })
+        document.getElementById('button').addEventListener('click', (e) => {
+            e.currentTarget;
+        })
+
+        var an = {
+            name : 'son',
+            sayHi : function()  {
+                 console.log(this.name)
+                 console.log(`${this.name} hi`)
             }
+            }
+        
+
+        an.sayHi();
+
+
+        var plus = {
+          data : [1,2,3,4,5],
         }
-        array.fun()
+       var zz = 0
+        plus.pluss = function () {
+            this.data.forEach(function(a){
+                zz = zz + a;
+            })
+            console.log(zz)
+        }
+
+        plus.pluss()
+
+        // document.getElementById('button').addEventListener('click', function(){
+        //     console.log(this);
+
+        //     var abc = [1, 2, 3]
+        //     abc.forEach(function(a){
+        //         console.log(a)
+        //     })
+        // })
+
+
+        // var array = {
+        //     name : ['kim', 'lee', 'park'],
+        //     fun : function(){
+        //         array.name.forEach(function(){
+        //             console.log(this);
+        //         })
+        //     }
+        // }
+        // array.fun()
 
         // var abc = {
         //     data : 'kim',

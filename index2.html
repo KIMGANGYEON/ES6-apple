@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // 'use strict'
+
+
+        var person = {
+            hello : function(){
+                console.log(this.name + 'hihi')
+                console.log(this.age + 'hihi')
+            }
+        }
+        // person.hello()
+
+        var person2 = {
+            name : 'son', 
+            age : [20]
+        }
+
+        person.hello.apply(person2, [20])
+        person.hello.call(person2)
+
+
+
+        var o1 = {a : 1, b : 2};
+        var o2 = {...o1, c : 3}
+        console.log(o2);
+
+        var a = [1,2,3];
+        var b = [...a];
+
+        a[3] = 4;
+
+        console.log(a)
+        console.log(b);
+
+        function plus(a, b, c){
+            console.log(a+ b+ c)
+        }
+        var array = [10, 20, 30]
+        // plus(...array)
+        plus.apply(undefined, array)
+
+        //spread operator
+
+        // var abc = ['hello', 'world'];
+        // console.log(...abc);
+
+        // var a = [1,2,3]
+        // var b = [4,5,6,]
+        // var c = [...a, ...b];
+        // console.log(c);
+
+        // var a = 'son'
+        // var b = `hello i'm ${a} `
+
+        // function abc (z, v) {
+        //     console.log(z[1]+ v +z[0])
+           
+        // }
+
+        // abc` hello  ${a} i'm `
+
+        //     var pants = 0;
+        //     var socks = 100;
+
+        //     function abc (z, v, x) {
+        //         console.log(z[1]+v+z[0]+x)
+        //     }
+        //     function abc(z, v, x) {
+        //         if (v == 0) {
+        //             console.log('no');
+        //         }
+        //     }
+
+        // abc`바지${pants} 양말${socks}`;
+
+    </script>
+</body>
+</html>

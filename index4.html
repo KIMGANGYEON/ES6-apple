@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+
+        Array.prototype.remove3 = function(){
+            for (var i = 0; i <this.length; i++) {
+                if (this[i] === 3) {
+                    this.splice(i,1);
+                }
+            }
+        }
+
+        var arr = [1, 2, 3, 4];
+        arr.remove3();
+        console.log(arr);
+
+
+
+
+    </script>
+    
+    <script>
+
+function Student(이름, 나이){
+  this.name = 이름;
+  this.age = 나이;
+}
+
+Student.prototype.sayHi = () => {
+    console.log('안녕 나는 ' + this.name + '이야');
+  }
+var 학생1 = new Student('Kim', 20);
+
+학생1.sayHi(); //왜 이 코드가 제대로 안나오죠?
+
+        var 부모 = {name : 'kim'};
+        var 자식 = {};
+        자식.__proto__ = 부모;
+        자식.name
+
+        // var a1 = {
+        //     name : 'kim', 
+        //     age : 15,
+        //     sayHi : function(){
+        //         console.log('안녕하세요' + this.name + '입니다');
+        //     }
+        // }
+
+        // a1.sayHi();
+
+
+
+
+        function Mm(hh, xx, cc){
+            this.name = hh;
+            this.age = xx;
+            this.money = cc*0.1
+            this.sayHi = function() {
+                console.log('안녕하세요' + this.name + '입니다');
+            }
+        }
+
+        Mm.prototype.gender = '남';
+
+        toString
+    
+
+        var a1 = new Mm('zz', 40, 5000)
+        var a2 = new Mm('vv', 30)
+        //콘솔 입력
+        a1.sayHi()
+        a2.sayHi()
+
+    </script>
+
+
+    <script>
+        // var name1 = { name : 'kim'}
+
+        // function change(obj){
+        //     obj.name = 'park';
+        // }
+
+        // change(name1);
+    </script>
+</body>
+</html>
