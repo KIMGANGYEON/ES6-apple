@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <img id="test" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDA0MTdfNDAg%2FMDAxNTg3MDkyMjEwNzMy.om0pWdr2r-WjQ-U4vO5UbXafbtkPSbhK_lgAHptwVW0g.f9buEWRb83qYuP8fl8c8kURj7W-sxcqVpBKUjKKnWkMg.PNG.kisometoo%2F%25B3%25D7%25C0%25CC%25B9%25F6.png&type=a340">
+
+
+    <script>
+
+        var pro = new Promise((good, no)=>{
+            
+             $.get('https://codingapple1.github.io/hello.txt').done(function(az){
+                 good(az)
+             });
+
+        })
+
+        pro.then(function(az){
+            console.log(az)
+            return ajax('https://codingapple1.github.io/hello2.txt')
+        }).then(function(az){
+            console.log(az)
+        })
+    ;
+
+        function ajax(url){
+            return new Promise((good, no)=>{
+            $.get(url).done(function(az){
+                good(az)
+            });
+
+        })
+        }
+
+
+    //     var imgLoad = new Promise(function(good, no){
+
+        
+    //     var img = document.querySelector('#test');
+    //     img.addEventListener('load', function(){
+    //         good();
+    //     });
+
+    //     img.addEventListener('error', function(){
+    //         no();
+    //     });
+    // });
+
+    // imgLoad.then(function(){
+    //     console.log('ggg')
+    // }).catch(function(){
+    //     console.log('nono')
+    // })
+
+
+
+    </script>
+</body>
+</html>

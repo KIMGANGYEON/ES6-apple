@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <custom-input name="비번"></custom-input>
+    <custom-input name="이메일"></custom-input>
+    <script>
+        class 클래스 extends HTMLElement {
+            connectedCallback(){
+                // let 변수 = document.createElement('label')
+                // this.appendChild(변수)
+                let name = this.getAttribute('name');
+                this.innerHTML = `
+                <label>${name}이메일</label><input>`
+            }
+            static get observedAttributes() {
+                return ['name']
+            }
+            attributeChangedCallback() {
+                console.log(this.getAttribute('name'))
+            }
+        }
+        customElements.define('custom-input',클래스 );
+    </script>
+</body>
+</html>

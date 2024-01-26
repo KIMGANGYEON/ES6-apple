@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function plus(콜백){
+        //      1 +1 
+        //      콜백()
+        // }
+        // plus(function (){
+            
+        // })
+
+
+    //    async function plus(){
+    //        return  1 +1 
+            
+    //     }
+    //     plus().then(function(결과){
+    //         console.log(결과)
+    //     })
+
+        async function plus(){
+           var pro = new Promise(function(good, no){
+            var abc = 1 + 1;
+            good(100);
+           });
+
+        //    pro.then(function(){
+        //     console.log('good job')
+        //    })
+
+
+        
+        // try{} catch{} //실패할떄
+            try {
+                var abc2 = await pro;
+                console.log(abc2);
+            } catch {
+                console.log('잘안됨')
+            }
+        
+        //    var abc2 = await pro
+        //    console.log(abc2);
+        // }
+        }
+        plus()
+        // plus().then(function(결과){
+        //     console.log(결과)
+        // })
+    </script>
+</body>
+</html>

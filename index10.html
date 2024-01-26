@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var pro = new Promise(function(resolve, reject){
+            setTimeout(function() {
+                resolve();
+            }, 1000)
+            
+            // var plus = 1 + 1;
+            // resolve(plus); //= then
+            // // reject();
+           
+        });
+        
+        // pro.then(function(az){
+        //     console.log(az)
+        pro.then(function(){
+            console.log('good')
+        }).catch(function(){
+            console.log('nono')
+        })
+
+
+        function a1(z2) {
+            z2()
+        }
+        function a2() {
+            
+        }
+
+        a1(a2)
+
+    </script>
+</body>
+</html>

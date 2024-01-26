@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // Destructuring
+
+        var arr = [2,3,4];
+
+        var [a,b,c = 10] = [2,3]
+
+
+        // var obj = { name : 'kim', age : 30 };
+        // var name = obj.name;
+        // var age = obj.age;
+        // var { name : 나이  = 'Park', age = 31 } = {name : 'kim', age : 30 };
+
+        // var name = 'kim';
+        // var age = 30;
+
+        // var obj = {name : name, age : age };
+        // var obj = { name, age };
+
+        var obj = { name : 'kim', age : 30 };
+
+        function abc( {name, age}) {
+            console.log(name);
+            console.log(age);
+        }
+        abc({name : 'kim', age : 30})
+        //대괄호도 가능
+
+        let 신체정보 = {
+  body: {
+    height: 190,
+    weight: 70
+  },
+  size: ["상의 Large", "바지 30인치"],
+};
+
+let {
+  body: {
+    height, 
+    weight
+  },
+  size: [ 상의, 하의 ]
+} = 신체정보;
+    </script>
+</body>
+</html>
